@@ -41,6 +41,8 @@
         <tomcat-embed-core-version>8.5.20</tomcat-embed-core-version>
         <logback-classic-version>1.2.3</logback-classic-version>
         <jackson-core-version>2.9.5</jackson-core-version>
+        <spring-webmvc-version>5.0.5.RELEASE</spring-webmvc-version>
+        <lombok-version>1.16.16</lombok-version>
         <!--<leyou.latest.version>1.0.0</leyou.latest.version>-->
     </properties>
 
