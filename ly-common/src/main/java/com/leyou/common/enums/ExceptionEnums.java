@@ -11,8 +11,8 @@ import lombok.NoArgsConstructor;
  * @auther: hejia
  * @date: 2019/3/28
  */
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
 public enum  ExceptionEnums {
     PRICE_CANNOT_BE_NULL(400,"价格不能为空"),
 
@@ -29,14 +29,23 @@ public enum  ExceptionEnums {
         return code;
     }
 
+    /**
+     * @param code code
+     */
     public void setCode(int code) {
         this.code = code;
     }
 
+    /**
+     * @return msg
+     */
     public String getMsg() {
         return msg;
     }
 
+    /**
+     * @param msg msg
+     */
     public void setMsg(String msg) {
         this.msg = msg;
     }
