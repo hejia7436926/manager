@@ -36,6 +36,12 @@
             <artifactId>spring-webmvc</artifactId>
             <version>${spring-webmvc-version}</version>
         </dependency>
+        <!--mapper-->
+        <dependency>
+            <groupId>tk.mybatis</groupId>
+            <artifactId>mapper</artifactId>
+            <version>${mapper-version}</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
