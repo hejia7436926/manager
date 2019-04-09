@@ -42,6 +42,11 @@
             <artifactId>mapper-spring-boot-starter</artifactId>
             <version>${mapper.starter.version}</version>
         </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>${commons-lang3-version}</version>
+        </dependency>
         <!-- 分页助手启动器 -->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
