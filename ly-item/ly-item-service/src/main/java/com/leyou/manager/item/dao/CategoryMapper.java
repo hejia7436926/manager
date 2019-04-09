@@ -1,5 +1,6 @@
-package com.leyou.manager;
+package com.leyou.manager.item.dao;
 
+import com.leyou.common.entity.Category;
 import tk.mybatis.mapper.common.Mapper;
 
 /**
@@ -9,5 +10,5 @@ import tk.mybatis.mapper.common.Mapper;
  * @auther: hejia
  * @date: 2019/4/9
  */
-public interface CategoryMapper extends Mapper {
+public interface CategoryMapper extends Mapper<Category> {
 }
