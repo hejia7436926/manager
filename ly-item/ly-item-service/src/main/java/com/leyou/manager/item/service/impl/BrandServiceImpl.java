@@ -1,5 +1,4 @@
 package com.leyou.manager.item.service.impl;
-
 import com.github.pagehelper.Page;
 import com.github.pagehelper.PageHelper;
 import com.leyou.common.entity.Brand;
@@ -38,9 +37,8 @@ public class BrandServiceImpl {
             example.setOrderByClause(orderByClause);
         }
         // 查询
-//        Page<Brand> pageInfo = (Page<Brand>) brandMapper.selectByExample(example);
-//        // 返回结果
-//        return new PageResult<>(pageInfo.getTotal(), pageInfo);
-        return null;
+        Page<Brand> pageInfo = (Page<Brand>) brandMapper.selectByExample(example);
+        // 返回结果
+        return new PageResult<>(pageInfo.getTotal(),pageInfo);
     }
 }
