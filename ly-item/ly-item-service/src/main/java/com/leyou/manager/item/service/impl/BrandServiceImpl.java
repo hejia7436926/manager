@@ -21,7 +21,10 @@ public class BrandServiceImpl {
 
     @Autowired
     private BrandMapper brandMapper;
-    /**TODU*/
+    /**
+    * @param page:当前页
+     * @param rows：每页大小
+    */
     public PageResult<Brand> queryBrandByPageAndSort(Integer page,Integer rows,String sortBy,Boolean desc,String key){
         //开始分页
         PageHelper.startPage(page,rows);
