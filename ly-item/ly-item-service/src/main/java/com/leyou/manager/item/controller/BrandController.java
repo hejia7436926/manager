@@ -28,6 +28,9 @@ public class BrandController {
     /**
      * @param page:当前页
      * @param rows：每页大小
+     * @param sortBy:排序字段
+     * @param desc:是否为降序
+     * @param key:搜索关键字
      */
     @GetMapping("/brand/page")
     public ResponseEntity<PageResult<Brand>> queryBrandByPage(
@@ -44,7 +47,8 @@ public class BrandController {
     }
 
     /**  新增品牌
-     * @param
+     * @param brand:品牌的信息
+     * @param cids:商品分类编号的集合
      */
     @PostMapping("/brand")
     public ResponseEntity<Void> saveBrand(Brand brand,@RequestParam("cids")List<Long> cids){
