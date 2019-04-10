@@ -7,7 +7,10 @@ import com.leyou.manager.item.dao.BrandMapper;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import tk.mybatis.mapper.entity.Example;
+
+import java.util.List;
 
 /**
  * @version : 1.0
@@ -43,5 +46,14 @@ public class BrandServiceImpl {
         Page<Brand> pageInfo = (Page<Brand>) brandMapper.selectByExample(example);
         // 返回结果
         return new PageResult<>(pageInfo.getTotal(),pageInfo);
+    }
+
+    /**新增品牌*/
+    @Transactional
+    public void saveBrand(Brand brand, List<Long>cids){
+        this.brandMapper.insertSelective(brand);
+        for(Long cid : cids){
+            this.brandMapper.insertCategoryBrand(cid,brand.getId());
+        }
     }
 }
