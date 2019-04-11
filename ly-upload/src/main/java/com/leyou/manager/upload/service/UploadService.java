@@ -36,7 +36,7 @@ public class UploadService {
                 log.info("上传失败，文件类型不匹配",type);
                 return null;
             }
-            //2)校验图片内容
+            //2)校验图片内容           ImageIO读取io流
             BufferedImage image = ImageIO.read(file.getInputStream());
             if(image == null){
                 log.info("上传失败，文件内容不符合要求");
