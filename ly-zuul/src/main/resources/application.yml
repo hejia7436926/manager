@@ -13,7 +13,7 @@ eureka:
     ip-address: 127.0.0.1
     instance-id: ${spring.application.name}:${server.port}
 zuul:
-  ignored-patterns: /upload/**
+  ignored-patterns: /upload/** # zuul.ignored-patterns:用来忽略不希望路由的url路径
   ignored-services: upload-service # 忽略upload-service服务
   prefix: /api # 添加路由前缀
   retryable: true
