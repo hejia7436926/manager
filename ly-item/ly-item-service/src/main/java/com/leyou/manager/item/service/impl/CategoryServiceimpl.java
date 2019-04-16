@@ -20,4 +20,11 @@ public class CategoryServiceimpl implements ICategoryService {
         category.setParentId(pid);
         return categoryMapper.select(category);
     }
+
+    public List<Category> queryByBrandId(Long bid){
+
+        return categoryMapper.queryByBrandId(bid);
+    }
+
+
 }
