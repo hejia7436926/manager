@@ -1,7 +1,9 @@
 package com.leyou.manager.upload.service;
 
+import com.leyou.manager.upload.config.UploadProperties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
@@ -23,16 +25,18 @@ import java.util.List;
 @Configuration
 public class UploadService {
     private static final Logger log = LoggerFactory.getLogger(UploadService.class);
+    @Autowired
+    private UploadProperties properties;
 
     //支持的文件类型
-    private static final List<String>suffixes = Arrays.asList("image/png","image/jpeg");
+    //private static final List<String>suffixes = Arrays.asList("image/png","image/jpeg");
 
     public String upload(MultipartFile file){
         try {
             // 1图片信息校验
             // 1）校验文件类型
             String type = file.getContentType();
-            if(!suffixes.contains(type)){
+            if(!properties.getAllowTypes().contains(type)){
                 log.info("上传失败，文件类型不匹配",type);
                 return null;
             }
@@ -52,7 +56,7 @@ public class UploadService {
             file.transferTo(new File(dir,file.getOriginalFilename()));
 
             //2.3拼接图片地址
-            String url = "http://image.leyou.com/upload/"+file.getOriginalFilename();
+            String url = properties.getAllowTypes()+file.getOriginalFilename();
             return url;
         }catch (Exception e){
             return null;
