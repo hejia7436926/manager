@@ -1,11 +1,13 @@
 package com.leyou.common.entity;
 
 
+import java.io.Serializable;
 import java.util.Date;
 /**
  * 该表描述的是一个抽象性的商品，比如 iphone8
  */
-public class Spu {
+public class Spu implements Serializable {
+    private static final long serialVersionUID = 1257274503614301832L;
     private Long id;
     /**
      * 主题

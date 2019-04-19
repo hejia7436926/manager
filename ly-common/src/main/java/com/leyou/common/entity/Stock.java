@@ -1,8 +1,12 @@
 package com.leyou.common.entity;
+
+import java.io.Serializable;
+
 /**
  * 库存表
  */
-public class Stock {
+public class Stock implements Serializable {
+    private static final long serialVersionUID = 8065068811782812946L;
     /**
      * 库存对应的商品sku id
      */

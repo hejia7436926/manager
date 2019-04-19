@@ -1,12 +1,14 @@
 package com.leyou.common.entity;
 
 
+import java.io.Serializable;
 import java.util.Date;
 /**
  * sku表 表示具体的商品实体，如黑色的 64g的ipone 6s
  */
-public class Sku {
+public class Sku implements Serializable {
 
+    private static final long serialVersionUID = 2663003826536984179L;
     private Long id;
 
     /**

@@ -1,10 +1,12 @@
 package com.leyou.common.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 /**
 * 促销活动表
 */
-public class Promotion {
+public class Promotion implements Serializable {
+    private static final long serialVersionUID = -175956673995031593L;
     /**
      * 促销活动id
      */

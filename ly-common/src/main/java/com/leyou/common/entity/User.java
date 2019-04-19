@@ -1,10 +1,12 @@
 package com.leyou.common.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 /**
  * 用户表
  */
-public class User {
+public class User implements Serializable {
+    private static final long serialVersionUID = 6920915829026193852L;
     private Long id;
     /**
      * 用户名

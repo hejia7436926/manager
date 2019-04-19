@@ -1,9 +1,12 @@
 package com.leyou.common.entity;
 
+import java.io.Serializable;
+
 /**
  * 商品详细信息表
  */
-public class SpuDetail {
+public class SpuDetail implements Serializable {
+    private static final long serialVersionUID = 7173886773902882949L;
     /***/
     private Long spuId;
     /**

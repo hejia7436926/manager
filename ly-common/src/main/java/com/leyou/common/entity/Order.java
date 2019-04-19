@@ -1,10 +1,12 @@
 package com.leyou.common.entity;
 
+import java.io.Serializable;
 import java.util.Date;
 /**
 * 订单表
 */
-public class Order {
+public class Order implements Serializable {
+    private static final long serialVersionUID = -1369091508947377173L;
     /**
      * 订单id
      */

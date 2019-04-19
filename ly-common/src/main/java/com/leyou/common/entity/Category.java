@@ -1,10 +1,13 @@
 package com.leyou.common.entity;
 
+import java.io.Serializable;
+
 /**
  * 类目表
  */
-public class Category {
+public class Category implements Serializable {
 
+    private static final long serialVersionUID = -8149186333857982993L;
     private Long id;
     /**类目名称*/
     private String name;

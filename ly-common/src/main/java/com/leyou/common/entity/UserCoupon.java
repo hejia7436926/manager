@@ -1,8 +1,12 @@
 package com.leyou.common.entity;
+
+import java.io.Serializable;
+
 /**
  * 用户持有优惠券的使用情况表
  */
-public class UserCoupon {
+public class UserCoupon implements Serializable {
+    private static final long serialVersionUID = -1706841621984438318L;
     /**
      * 每张优惠券的编号
      */

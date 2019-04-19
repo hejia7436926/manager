@@ -1,8 +1,12 @@
 package com.leyou.common.entity;
+
+import java.io.Serializable;
+
 /**
  * 商品规格参数模板，json格式。
  */
-public class Specification {
+public class Specification implements Serializable {
+    private static final long serialVersionUID = 1067400184261739320L;
     /**
      * 规格模板所属商品分类id
      */
