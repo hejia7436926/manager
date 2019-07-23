@@ -1,7 +1,6 @@
 package com.leyou.manager.item.controller;
 
 import com.leyou.common.entity.Category;
-import com.leyou.manager.item.service.ICategoryService;
 import com.leyou.manager.item.service.impl.CategoryServiceimpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
